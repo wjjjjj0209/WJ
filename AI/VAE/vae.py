@@ -56,7 +56,7 @@ class Vae(Model):
 def main():
     epochs = 1
     lr = 0.001
-    batch_size = 100
+    batch_size = 128
 
     mnist = tf.keras.datasets.mnist
     (x_train, y_train), (x_test, y_test) = mnist.load_data()

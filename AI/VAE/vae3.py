@@ -65,8 +65,8 @@ def main():
     lr = 0.001
     batch_size = 128
 
-    mnist = tf.keras.datasets.mnist
-    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    fashion = tf.keras.datasets.fashion_mnist
+    (x_train, y_train), (x_test, y_test) = fashion.load_data()
     x_train, x_test = x_train / 255.0, x_test / 255.0
     x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
     x_train = x_train.astype('float32')
@@ -81,9 +81,9 @@ def main():
 
     model = Vae()
     optimizer = tf.keras.optimizers.Adam(lr)
-    if os.path.exists('./vae2/vae.index'):
+    if os.path.exists('./vae3/vae.index'):
         print('-------------load the model-----------------')
-        model.load_weights('./vae2/vae')
+        model.load_weights('./vae3/vae')
 
     for epoch in range(epochs):
         start1 = time.perf_counter()
@@ -110,7 +110,7 @@ def main():
         end1 = time.perf_counter()
         print(epoch, 'last-loss:', float(last_loss), end1 - start1, 's')
 
-    model.save_weights('./vae2/vae')
+    model.save_weights('./vae3/vae')
 
     f, a = plt.subplots(2, 10, figsize=(10, 2))
 
