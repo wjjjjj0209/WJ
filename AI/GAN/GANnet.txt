@@ -1,2 +1,4 @@
-手写数字生成和fashion生成
-全连接和卷积
+GAN0：手写数字生成，只有全连接层
+GAN1：手写数字生成，反卷积和卷积
+GAN2：Fashion图片生成，同GAN1
+GAN3：cifar10图片生成，类似VGGnet结构
