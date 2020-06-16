@@ -1,4 +1,4 @@
-epochs = 5
+epochs = 8
 levels = [2, 3, 4, 5]
 batch_size = 16
 beta1 = 0.0
@@ -6,6 +6,7 @@ beta2 = 0.99
 lam_gp = 10
 lam_eps = 0.001
 n_critic = 1
-data_size = 10000
+data_size = 30000
 learning_rate = 0.001
 z_dim = 512
+ada_ep = 1e-8
