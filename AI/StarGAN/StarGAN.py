@@ -14,7 +14,7 @@ for gpu in gpus:
 
 def main():
 
-    epochs = 10
+    epochs = 1
     batch_size = 16
     learning_rate = 0.0001
     beta1 = 0.5

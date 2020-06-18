@@ -21,7 +21,7 @@ discriminator = SGmodel.Discriminator()
 g_optimizer = tf.optimizers.Adam(learning_rate=0.0001, beta_1=0.5, beta_2=0.999)
 d_optimizer = tf.optimizers.Adam(learning_rate=0.0001, beta_1=0.5, beta_2=0.999)
 
-checkpoint_dir = 'PGGAN_pn in dis'
+checkpoint_dir = 'StarGAN'
 checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
 checkpoint = tf.train.Checkpoint(g_optimizer=g_optimizer,
                                  d_optimizer=d_optimizer,
